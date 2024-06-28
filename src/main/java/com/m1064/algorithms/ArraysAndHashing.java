@@ -1,7 +1,8 @@
-package com.m1064;
+package com.m1064.algorithms;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class ArraysAndHashing {
 
@@ -67,12 +68,27 @@ public class ArraysAndHashing {
         for (int i = 0; i < nums.length; i++) {
             int subDiff = target - nums[i];
             if (tmpMap.containsKey(subDiff)) {
-                int[] answer = new int[]{tmpMap.get(subDiff), i};
-                return answer;
+                return new int[]{tmpMap.get(subDiff), i};
             }
 
             tmpMap.put(nums[i], i);
         }
+
+        return null;
+    }
+
+    /**
+     * <p>Given an array of strings strs, group the anagrams together.</p>
+     * <pre>
+     *     <b>Example</b>
+     *     Input: strs = ["eat","tea","tan","ate","nat","bat"]
+     *     Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+     * </pre>
+     * @param strs array of strings
+     * @return {@code List<List<String>>}
+     */
+    public List<List<String>> groupAnagrams(String[] strs) {
+        //TODO Write Test and implementation
 
         return null;
     }
