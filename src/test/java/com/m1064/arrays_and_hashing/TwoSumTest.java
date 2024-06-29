@@ -1,6 +1,5 @@
-package com.m1064.ArraysAndHashingTests;
+package com.m1064.arrays_and_hashing;
 
-import com.m1064.algorithms.ArraysAndHashing;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -29,7 +28,7 @@ public class TwoSumTest {
         mapOfTargetAndArray.forEach((key, value) -> {
             assertArrayEquals(
                     listOfCorrect.get(listIndex.get()),
-                    ArraysAndHashing.twoSum(mapOfTargetAndArray.get(key), key)
+                    TwoSum.twoSum(mapOfTargetAndArray.get(key), key)
             );
             listIndex.getAndIncrement();
         });

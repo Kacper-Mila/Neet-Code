@@ -1,6 +1,5 @@
-package com.m1064.ArraysAndHashingTests;
+package com.m1064.arrays_and_hashing;
 
-import com.m1064.algorithms.ArraysAndHashing;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -17,7 +16,7 @@ public class IsAnagramTest {
             List.of("katapulta", "pultakata")
         );
 
-        listOfCorrect.forEach(anagramList -> assertTrue(ArraysAndHashing.isAnagram(anagramList.getFirst(), anagramList.getLast())));
+        listOfCorrect.forEach(anagramList -> assertTrue(IsAnagram.isAnagram(anagramList.get(0), anagramList.get(1))));
     }
 
     @Test
@@ -27,6 +26,6 @@ public class IsAnagramTest {
                 List.of("patelnia", "patelnio")
         );
 
-        listOfCorrect.forEach(anagramList -> assertFalse(ArraysAndHashing.isAnagram(anagramList.getFirst(), anagramList.getLast())));
+        listOfCorrect.forEach(anagramList -> assertFalse(IsAnagram.isAnagram(anagramList.get(0), anagramList.get(1))));
     }
 }

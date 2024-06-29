@@ -1,6 +1,5 @@
-package com.m1064.ArraysAndHashingTests;
+package com.m1064.arrays_and_hashing;
 
-import com.m1064.algorithms.ArraysAndHashing;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -20,7 +19,7 @@ public class HasDuplicateTest {
         );
 
         //Then
-        listOfContaining.forEach(intArr -> assertTrue(ArraysAndHashing.hasDuplicate(intArr)));
+        listOfContaining.forEach(intArr -> assertTrue(HasDuplicate.hasDuplicate(intArr)));
     }
 
     @Test
@@ -30,6 +29,6 @@ public class HasDuplicateTest {
                 new int[]{1,8,4,3,7,6,9}
         );
 
-        listOfNotContaining.forEach(intArr -> assertFalse(ArraysAndHashing.hasDuplicate(intArr)));
+        listOfNotContaining.forEach(intArr -> assertFalse(HasDuplicate.hasDuplicate(intArr)));
     }
 }
