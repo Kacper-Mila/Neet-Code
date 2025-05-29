@@ -5,18 +5,19 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EncodeAndDecodeTest {
-
     @Test
-    public void shouldReturnStringFromListOfStrings() {
-        List<String> list = List.of("This", "is", "a", "test");
-        String encoded = EncodeAndDecode.encode(list);
-        assertEquals("This is a test", encoded);
+    void testEncodeAndDecode_basic() {
+        List<String> input = List.of("hello", "world", "!");
+        String encoded = EncodeAndDecode.encode(input);
+        List<String> decoded = EncodeAndDecode.decode(encoded);
+        assertEquals(input, decoded);
     }
 
     @Test
-    public void shouldReturnListOfStringsFromString() {
-        String str = "This also is a test";
-        List<String> decoded = EncodeAndDecode.decode(str);
-        assertEquals(List.of("This", "is", "a", "test"), decoded);
+    void testEncodeAndDecode_emptyList() {
+        List<String> input = List.of();
+        String encoded = EncodeAndDecode.encode(input);
+        List<String> decoded = EncodeAndDecode.decode(encoded);
+        assertEquals(input, decoded);
     }
 }
